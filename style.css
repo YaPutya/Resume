@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+html, body, header {
+  height: 100%;
+}
+
+.header {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header div {
+  width: 100%;
+}
+
+.header::after{
+  content: "";
+  position: absolute;
+  background-image: url("./img/mountain2.jpg");
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  z-index: -2;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-title {
+  font-size: 65px;
+  color: white;
+  text-align: center;
+}
+
+.header-nav {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-basis: 30%;
+  padding: 50px 0;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: 0.6s;
+}
+
+.header-nav.sticky {
+  padding: 35px 0;
+  background: rgba(255, 255, 255, .8);
+}
+
+.header-nav.sticky a {
+  color: black;
+}
+
+.header-nav.sticky a:hover {
+  color: rgb(71, 47, 53);
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s;
+  margin: 0 20px;
+}
+
+.header-nav a:hover {
+  cursor: pointer;
+  color: rgb(255, 193, 208);
+}
+
+.header-content {
+  display: flex;
+  flex-basis: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content p {
+  margin: 15px 0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button5 {
+  background-color: Transparent;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.button5:hover {
+  background-color: #555555;
+  color: white;
+}
+
+/* ---------------------------  main-section  -------------------------- */
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 60vh; */
+}
+
+.info-section h2, .info-section p {
+  font-family: 'Heebo', sans-serif;
+  font-size: 40px;
+}
+
+.info-section p {
+  padding: 0 5vw;
+  font-size: 16px;
+}
+.info-section h2 {
+  margin-top: 5vh;
+}
+
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.about-me img {
+  zoom: 0.8;
+}
+
+.about-me-text {
+  flex-basis: 70%;
+}
+
+.examples {
+  margin: 35px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  transition: 0.8s;
+}
+
+.examples div img {
+  -webkit-box-shadow: -5px 5px 15px 5px #6e6a6a; 
+  box-shadow: -5px 5px 15px 5px #6e6a6a;
+  height: 25vh;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  transition: transform .2s;
+}
+
+.hexal1 {
+  z-index: 1;
+}
+
+.hexal2 {
+  z-index: 2;
+  top: -1vh;
+  left: 1vw;
+}
+
+.hexal3 {
+  z-index: 3;
+  top: -2vh;
+  left: 2vw
+}
+
+.nm1 {
+  z-index: 1;
+}
+
+.nm2 {
+  z-index: 2;
+  top: -1vh;
+  left: 1vw;
+}
+
+.nm3 {
+  z-index: 3;
+  top: -2vh;
+  left: 2vw
+}
+
+.examples div img:hover {
+  z-index: 5;
+  transform: scale(1.2);
+} 
+
+/* ---------------------------  footer  -------------------------- */
+
+footer {
+  background-color: rgb(39, 39, 38); 
+  height: 10vh;
+  display: flex;
+}
+
+.signature {
+  flex-basis: 85%;
+  display: flex;
+  color: rgb(129, 122, 122);
+  align-items: center;
+  height: 100%;
+  margin-left: 10px;
+}
+
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fa {
+  text-decoration: none;
+  color: rgb(129, 122, 122);
+  font-size: 18px;
+  margin: 0 5px;
+  padding: 7px;
+  border: 1px solid rgb(129, 122, 122);
+  border-radius: 50%;
+}
+
+.fa:hover {
+  transition: color 0.5s;
+  color: rgb(255, 193, 208);
+}
+
+.fa:last-child {
+  margin-right: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .examples div img {
+    -webkit-box-shadow: 0px -8px 21px 4px #000000; 
+    box-shadow: 0px -8px 21px 4px #000000;
+  }
+
+  .hexal2, .hexal3, .nm2, .nm3 {
+    left: 0vw;
+  }
+}
